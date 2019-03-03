@@ -1,0 +1,34 @@
+Sub Stocks()
+
+    Dim lastRow As Long
+    Dim Actual_ticker As String
+    Dim Volume as Double
+    Volume = 0
+    Dim Summary_Table_Row as Integer
+    Summary_Table_Row=2
+    
+For Each ws in Worksheets
+    
+    lastRow = ws.Cells(Rows.Count, 1).End(xlup).Row
+
+    For i= 2 To lastRow
+        if Cells(i+1, 1).Value <> Cells(i, 1) Then
+
+        Actual_ticker=Cells(i, 1).Value
+        Volume= Volume+Cells(i,7).Value
+        Range("I" & Summary_Table_Row).Value=Actual_ticker
+        Range("J" & Summary_Table_Row).Value=Volume
+
+        Summary_Table_Row=Summary_Table_Row=1
+
+        Volume=0
+
+        else
+        Volume=Volume+Cells(i, 7).Value
+
+        end if
+    Next i
+
+Next ws
+
+End Sub
