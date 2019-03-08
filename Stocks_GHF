@@ -19,7 +19,7 @@ For Each ws in Worksheets
         Range("I" & Summary_Table_Row).Value=Actual_ticker
         Range("J" & Summary_Table_Row).Value=Volume
 
-        Summary_Table_Row=Summary_Table_Row=1
+        Summary_Table_Row=Summary_Table_Row+1
 
         Volume=0
 
