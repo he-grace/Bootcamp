@@ -74,7 +74,7 @@ def browser_facts():
    tables = pd.read_html(url_4)
    df = tables[0]
    df.columns = ['Parameters', 'Meassures']
-   return df
+   return df.to_html(classes="table table-striped")
 
 # # Mars Hemispheres
 

@@ -32,11 +32,11 @@
         </div>
         <div class="col-md-10">
         <br> <br>
-            {% if title %}
+            {% if listings.title_1 %}
                 <h2>Latest Mars News</h2>
                 <hr>
-                <h3>{{title}}</h3>
-                <p> {{paragraph}}</p>
+                <h3>{{listings.title_1}}</h3>
+                <p> {{listings.paragraph_1}}</p>
                     <br>
             {% else %}
                 <h2>Click the Scrape New Data button above to get the latest Mars news, facts, and images</h2>
@@ -52,14 +52,14 @@
             <h3>Featured Image</h3>
             <hr>
             <figure>
-                <img src={{image}} alt="Featured image for NASA mars page">
+                <img src={{listings.image_1}} alt="Featured image for NASA mars page">
             </figure>
         </div>
         <div class='col-md-4'>
             <div class="data-box">
                 <h3>Current Weather on Mars</h3>
                 <hr>
-                <p>{weather}}</p>
+                <p>{listings.weather_1}}</p>
             </div>
             <br>
             <div class="data-box">
